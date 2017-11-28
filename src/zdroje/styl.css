@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26.3.2017, 18:47:43
+    Author     : Kuba
+*/
+
+body, html
+{
+    background-color: #eee;
+    margin:0;
+    padding:0;
+}
+
+div.divMain
+{
+    margin: 0 auto;
+    width: 960px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.imgMapa
+{
+    position: relative;
+    right: 0;
+}
+
+.imgMarlyn
+{
+    position: relative;
+    right: 0;
+    width: 150px
+}
+h1, h2{
+    color: #1B4A61;
+    font-family: 'Playfair Display', serif;
+}
+p{
+    color: #1B4A61;
+    font-family: 'Playfair Display', serif;
+}
+ul li{
+    list-style-type: disc;
+    padding: 5px 0;
+}
