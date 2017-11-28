@@ -82,20 +82,6 @@ public class PHorni {
                 
                 IHra novaHra = main.getHra();
                 
-//                novaHra.getHerniPlan().registraceObserver(main.getPPravy());
-//                novaHra.getHerniPlan().getBatoh().registraceObserver(main.getPPravy());
-//                novaHra.getHerniPlan().getAktualniProstor().registraceObserver(main.getPPravy());
-//                for (String nazev : novaHra.getHerniPlan().getProstory().keySet()) {
-//                    Prostor prostor = novaHra.getHerniPlan().getProstory().get(nazev);
-//                    prostor.registraceObserver(main.getPPravy());
-//                }
-//        
-//                novaHra.getHerniPlan().registraceObserver(main.getPLevy());
-                
-//                main.getPLevy().getTextArea().setText(novaHra.vratUvitani());
-//                main.getPLevy().aktualizuj();
-//                main.getPPravy().aktualizuj();
-                
             }
         });
        

@@ -10,6 +10,7 @@ package GUI;
 import interfaces.ObserverProstory;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import javafx.beans.binding.Bindings;
 import javafx.collections.FXCollections;
@@ -36,6 +37,7 @@ import logika.IHra;
 import logika.Prostor;
 import logika.Vec;
 import main.Main;
+import javafx.scene.media.AudioClip;
 
 /**
  *
@@ -52,6 +54,7 @@ public class PPravy implements ObserverProstory{
     private final Map<String, Prostor> prostory;
     private final Map<String, Vec> seznamVeci;
     private final PLevy pLevy;
+    private AudioClip seberZvuk;
     
     private static final double MARGIN_PRVKU = 30;
     private static final double SIRKA_PANELU = 400 - MARGIN_PRVKU;
@@ -142,6 +145,7 @@ public class PPravy implements ObserverProstory{
                     try{
                         String odpoved = hra.zpracujPrikaz("jdi "+item.getNazev());
                         pLevy.setText("jdi "+item.getNazev(), odpoved);
+                        
                     }
                     catch(NullPointerException e){
                         String odpoved = hra.zpracujPrikaz("jdi ");
@@ -206,6 +210,8 @@ public class PPravy implements ObserverProstory{
                     try{
                         String odpoved = hra.zpracujPrikaz("seber "+item.getNazev());
                         pLevy.setText("seber " + item.getNazev(), odpoved);
+                        seberZvuk = new AudioClip(this.getClass().getResource("/zdroje/seber.mp3").toString());
+                        seberZvuk.play();
                     }
                     catch(NullPointerException e){
                         String odpoved = hra.zpracujPrikaz("seber ");
@@ -313,5 +319,6 @@ public class PPravy implements ObserverProstory{
        });
        
     }
+
     
 }
